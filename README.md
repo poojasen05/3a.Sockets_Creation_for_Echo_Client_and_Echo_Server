@@ -16,35 +16,35 @@ REGISTER NUMBER:212223040146
 ## PROGRAM
 ##server
 ~~~
- import socket
- s=socket.socket()
- s.bind(('localhost',8000))
- s.listen(5)
- c,addr=s.accept()
- while True:
- ClientMessage=c.recv(1024).decode()
- c.send(ClientMessage.encode())
+import socket 
+s=socket.socket() 
+s.bind(('localhost',8000)) 
+s.listen(5) 
+c,addr=s.accept() 
+while True: 
+    ClientMessage=c.recv(1024).decode() 
+    c.send(ClientMessage.encode())
 ~~~
 
 ##client
 ~~~
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-while True:
-    msg=input("Client > ")
-    s.send(msg.encode())
+import socket 
+s=socket.socket() 
+s.connect(('localhost',8000)) 
+while True: 
+    msg=input("Client > ") 
+    s.send(msg.encode()) 
     print("Server > ",s.recv(1024).decode())
 
 ~~~
 
 ## OUPUT
-### server
-![Screenshot 2024-10-03 134736](https://github.com/user-attachments/assets/e2214461-9b30-483a-98f9-fdac86b232e2)
 
 
-### client
-![Screenshot 2024-10-03 134650](https://github.com/user-attachments/assets/cb1e18b7-4040-4512-b3f5-9fd848fc82b7)
+![Screenshot 2024-10-24 113318](https://github.com/user-attachments/assets/81724a4f-a31e-4d34-a92f-580790e67ba0)
+
+
+
 
 
 ## RESULT
